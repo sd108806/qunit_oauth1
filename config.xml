@@ -6,7 +6,7 @@
         version     = "1.0.0"
         versionCode = "10" >
 
-       
+       app title="qunit"
 
 
 <access origin ="*"/>
