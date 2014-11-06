@@ -30,16 +30,22 @@ $( document ).bind( "mobileinit", function() {
   
   <script>
   $(document).ready(function(){
-    test("a basic test example", function() {
-      
-	  
-	  var obj_changesets=get_changesets("sd108806/bb","", "","","");
-      equal( obj_changesets.count, "9", "We expect value to be 10" );
-    
+    var obj_changesets=get_changesets("sd108806/bb","", "","","");
+	
+	test("Total commit number ", function() {
+      equal( obj_changesets.count, "10", "We expect value to be 10" );
+    });
+	
+		
+		test("The author of commit0", function() {
+     equal( obj_changesets.changesets[0].author, "sd108806", "We expect value to be sd108806" );
+    });
+	
+		test("Number of files in commit0", function() {
+     equal( obj_changesets.changesets[0].files.length, "1", "We expect value to be 1" );
+    });
 	
 	
-	
-	});
   });
   </script>
 </head>
